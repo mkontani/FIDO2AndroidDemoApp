@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light"
+            android:text="STEP1. Registration Frow"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username: "
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/userName"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="DisplayName: "
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/displayName"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AuthenticatorAttachment: "
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/authenticatorAttachmentRG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/platformRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="platform" />
+
+            <RadioButton
+                android:id="@+id/cross_platformRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cross-platform" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UserVerification: "
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/userVerificationRG1"
+            android:background="@color/common_google_signin_btn_text_light_disabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/requiredRB1"
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="required" />
+
+            <RadioButton
+                android:id="@+id/preferredRB1"
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="preferred" />
+
+            <RadioButton
+                android:id="@+id/discouragedRB1"
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="discouraged" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AttestationConveyancePreference: "
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/attestationConveyancePreferenceRG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/noneRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="none" />
+
+            <RadioButton
+                android:id="@+id/indirectRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="indirect" />
+
+            <RadioButton
+                android:id="@+id/directRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="direct" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/residentCB"
+            android:clickable="false"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="requireResidentKey"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="timeout:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/timeout1"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="60"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="sec" />
+
+            <Button
+                android:id="@+id/registerFIDO2Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@color/colorPrimary"
+                android:onClick="registerFIDO2"
+                android:text="Register"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/registerResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/code" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/holo_orange_light"
+            android:text="STEP2. Assertion Frow"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BASE64(allowCredentials.id):"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/pubkeyId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="transports:"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/usbCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="usb" />
+
+            <CheckBox
+                android:id="@+id/nfcCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nfc" />
+
+            <CheckBox
+                android:id="@+id/ble_classicCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ble_classic" />
+
+            <CheckBox
+                android:id="@+id/ble_low_energyCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ble_low_energy" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="userVerification:"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/userVerificationRG2"
+                android:background="@color/common_google_signin_btn_text_dark_disabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/requiredRB2"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="required" />
+
+                <RadioButton
+                    android:id="@+id/preferredRB2"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="preferred" />
+
+                <RadioButton
+                    android:id="@+id/discouragedRB2"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="discouraged" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="rpId(option):"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/rpId"
+                android:text="niconico-pun.gitlab.io"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="timeout:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/timeout2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="60" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="sec" />
+
+            <Button
+                android:id="@+id/signFIDO2Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@color/colorAccent"
+                android:onClick="signFIDO2"
+                android:text="Sign"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/signResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/code" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

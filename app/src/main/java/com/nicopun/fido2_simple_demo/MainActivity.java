@@ -67,9 +67,8 @@ public class MainActivity extends AppCompatActivity {
     // static input values
     EditText userName, displayName, pubkeyId, timeout1, timeout2, rpId;
     TextView registerResult, signResult;
-    RadioButton platformRB, cross_platformRB, requiredRB1, preferredRB1, discouragedRB1, noneRB, indirectRB, directRB;
-    RadioButton requiredRB2, preferredRB2, discouragedRB2;
-    CheckBox residentCB, usbCB, nfcCB, ble_classicCB, ble_low_energyCB;
+    RadioButton platformRB, cross_platformRB, noneRB, indirectRB, directRB;
+    CheckBox usbCB, nfcCB, ble_classicCB, ble_low_energyCB;
     Activity activity = this;
 
     @Override
@@ -88,16 +87,9 @@ public class MainActivity extends AppCompatActivity {
         rpId = findViewById(R.id.rpId);
         platformRB = findViewById(R.id.platformRB);
         cross_platformRB = findViewById(R.id.cross_platformRB);
-        requiredRB1 = findViewById(R.id.requiredRB1);
-        preferredRB1 = findViewById(R.id.preferredRB1);
-        discouragedRB1 = findViewById(R.id.discouragedRB1);
         noneRB = findViewById(R.id.noneRB);
         indirectRB = findViewById(R.id.indirectRB);
         directRB = findViewById(R.id.directRB);
-        requiredRB2 = findViewById(R.id.requiredRB2);
-        preferredRB2 = findViewById(R.id.preferredRB2);
-        discouragedRB2 = findViewById(R.id.discouragedRB2);
-        residentCB = findViewById(R.id.residentCB);
         usbCB = findViewById(R.id.usbCB);
         nfcCB = findViewById(R.id.nfcCB);
         ble_classicCB = findViewById(R.id.ble_classicCB);

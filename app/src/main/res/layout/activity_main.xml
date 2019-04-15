@@ -30,8 +30,14 @@
 
             <EditText
                 android:id="@+id/userName"
-                android:layout_width="100dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -42,7 +48,7 @@
 
             <EditText
                 android:id="@+id/displayName"
-                android:layout_width="100dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
@@ -69,41 +75,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="cross-platform" />
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="UserVerification: "
-            android:textStyle="bold" />
-
-        <RadioGroup
-            android:id="@+id/userVerificationRG1"
-            android:background="@color/common_google_signin_btn_text_light_disabled"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/requiredRB1"
-                android:clickable="false"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="required" />
-
-            <RadioButton
-                android:id="@+id/preferredRB1"
-                android:clickable="false"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="preferred" />
-
-            <RadioButton
-                android:id="@+id/discouragedRB1"
-                android:clickable="false"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="discouraged" />
         </RadioGroup>
 
         <TextView
@@ -137,15 +108,6 @@
                 android:text="direct" />
         </RadioGroup>
 
-        <CheckBox
-            android:id="@+id/residentCB"
-            android:clickable="false"
-            android:background="@color/common_google_signin_btn_text_dark_disabled"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="requireResidentKey"
-            android:textStyle="bold" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -161,8 +123,8 @@
                 android:id="@+id/timeout1"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="60"
-                android:inputType="number" />
+                android:inputType="number"
+                android:text="60" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -243,46 +205,6 @@
                 android:text="ble_low_energy" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="userVerification:"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioGroup
-                android:id="@+id/userVerificationRG2"
-                android:background="@color/common_google_signin_btn_text_dark_disabled"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/requiredRB2"
-                    android:clickable="false"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="required" />
-
-                <RadioButton
-                    android:id="@+id/preferredRB2"
-                    android:clickable="false"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="preferred" />
-
-                <RadioButton
-                    android:id="@+id/discouragedRB2"
-                    android:clickable="false"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="discouraged" />
-            </RadioGroup>
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -297,9 +219,9 @@
 
             <EditText
                 android:id="@+id/rpId"
-                android:text="niconico-pun.gitlab.io"
                 android:layout_width="220dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="niconico-pun.gitlab.io" />
         </LinearLayout>
 
         <LinearLayout

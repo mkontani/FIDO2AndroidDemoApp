@@ -1,6 +1,6 @@
-# FIDO2 SIMPLE DEMO for Android native
+# FIDO2 SIMPLE DEMO with Android native library
 
-![UI SCREENSHOT](./captcha/uicaptcha.jpg)
+![UI SCREENSHOT](./screenshot/ui.jpg)
 
 
 This project uses `com.google.android.gms:play-services-fido`'s [Fido2ApiClient][1] to register a credential and also

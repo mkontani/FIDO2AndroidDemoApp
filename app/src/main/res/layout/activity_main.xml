@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/holo_orange_light"
-            android:text="STEP1. Registration Frow"
+            android:text="STEP1. Registration Flow"
             android:textSize="24sp" />
 
         <LinearLayout
@@ -155,7 +155,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@android:color/holo_orange_light"
-            android:text="STEP2. Assertion Frow"
+            android:text="STEP2. Assertion Flow"
             android:textSize="24sp" />
 
         <TextView
